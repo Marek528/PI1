@@ -1,16 +1,21 @@
-# This is a sample Python script.
+# toto je komentar
+print("Ahoj svet")
+print("test")
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+x = 5
+vysledok = x * x
+vysledok1= x * 4
+print("obsah x*x:",vysledok)
+print("obvod x*4:",vysledok1)
+
+x = 10
+y = 20
+
+z = x
+x = y
+y = z
+
+print("x=",x)
+print("y=",y)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
