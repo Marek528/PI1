@@ -8,8 +8,8 @@ vysledok1= x * 4
 print("obsah x*x:",vysledok)
 print("obvod x*4:",vysledok1)
 
-x = 10
-y = 20
+x = 5
+y = 2
 
 temp = x
 x = y
