@@ -11,9 +11,9 @@ print("obvod x*4:",vysledok1)
 x = 10
 y = 20
 
-z = x
+temp = x
 x = y
-y = z
+y = temp
 
 print("x=",x)
 print("y=",y)
