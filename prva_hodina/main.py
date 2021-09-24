@@ -11,9 +11,12 @@ print("obvod x*4:",vysledok1)
 x = 20
 y = 10
 
-temp = x
+z = x
 x = y
-y = temp
+y = z
 
 print("x=",x)
 print("y=",y)
+
+x = input('Enter your name: ')
+print('Hello , ' + x)
