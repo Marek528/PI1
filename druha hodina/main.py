@@ -1,4 +1,3 @@
-
 #pretypovanie
 #cislo
 #vek = int(input("Zadaj svoj vek: "))
