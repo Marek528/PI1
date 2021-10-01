@@ -1,5 +1,6 @@
 otazkaSiStastny = input("Si stastny? ")
 otazkaSiBohaty = input("Si bohaty? ")
+
 if(otazkaSiStastny == "ano"):
     if(otazkaSiBohaty == "ano"):
         print("gratulujem")

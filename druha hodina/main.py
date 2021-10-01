@@ -28,14 +28,16 @@ koniec ulohy"""
 #vysledok = 1 != 2
 #print(vysledok)
 
-"""vek = int(input("zadaj svoj vek "))
+"""
+vek = int(input("zadaj svoj vek "))
 if vek >= 18:
     print("vstup dalej, mas dost rokov")
     print("vitaj medzi nami")
 else:
     print("vstup zakazany, si moc mlady!")
 
-print("tento kod sa vykona vzdy")"""
+print("tento kod sa vykona vzdy")
+"""
 
 
 """a = 10
@@ -47,9 +49,9 @@ print("a = ", a)
 print("b = ", b)"""
 
 
-
-"""day = 5
-hour = 10
+"""
+day = 5
+hour = 13
 
 if day == 1:
     print("pondelok")
@@ -68,8 +70,10 @@ elif day == 5:
 elif day == 6:
     print("sobota")
 elif day == 7:
-    print("nedela")"""
+    print("nedela")
+"""
 
+"""
 username = input ("zadaj prihlasovacie meno: ")
 password = input ("zadaj prihlasovacie heslo: ")
 vek = input("zadaj svoj vek: ")
@@ -78,3 +82,4 @@ if username == "root" and password == "password" and vek == "18":
     print("uspesne si sa prihlasil!")
 else:
     print("zle meno alebo heslo alebo vek")
+"""
