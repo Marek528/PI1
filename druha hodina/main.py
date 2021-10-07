@@ -5,30 +5,31 @@
 
 #pretypovanie
 #desatine cislo
-#polomerKruhu = float(input("zadaj polomer kruhu: "))#
+#polomerKruhu = float(input("zadaj polomer kruhu: "))
 #obvodKruhu = 2*3.14*polomerKruhu
 #print("Obvdo kruhu je", obvodKruhu)
 
-"""uloha 1
+"""
 a = int(input("Zadaj cislo a: "))
 b = int(input("Zadaj cislo b: "))
 print("scitanie: ", a+b)
 print("odcitanie: ", a-b)
 print("nasobenie: ", a*b)
 if b == 0:
-    print("nulou sa delit neda")
+    print("nulou sa neda delit")
 else:
-    print("delenie: ", a / b)
-#print("delenie: ", a/b)
-koniec ulohy"""
+    print("delenie: ", a/b)
+"""
+
+
 
 #+-, *, %, **, /                - aritmeticke operatory
 #==, !=, <, >, <=, >=           - logicke operatory
-#vysledok = 1 != 2
+#vysledok = 1 != 0
 #print(vysledok)
 
 """
-vek = int(input("zadaj svoj vek "))
+vek = int(input("zadaj svoj vek: "))
 if vek >= 18:
     print("vstup dalej, mas dost rokov")
     print("vitaj medzi nami")
@@ -38,15 +39,15 @@ else:
 print("tento kod sa vykona vzdy")
 """
 
-
-"""a = 10
+"""
+a = 10
 b = 20
 z = a
 a = b
 b = z
 print("a = ", a)
-print("b = ", b)"""
-
+print("b = ", b)
+"""
 
 """
 day = 5
@@ -73,11 +74,11 @@ elif day == 7:
 """
 
 """
-username = input ("zadaj prihlasovacie meno: ")
-password = input ("zadaj prihlasovacie heslo: ")
+username = input("zadaj prihlasovacie meno: ")
+password = input("zadaj prihlasovacie heslo: ")
 vek = input("zadaj svoj vek: ")
 
-if username == "root" and password == "password" and vek == "18":
+if username == "root" and password == "password" and vek >= "18":
     print("uspesne si sa prihlasil!")
 else:
     print("zle meno alebo heslo alebo vek")
