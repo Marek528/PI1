@@ -44,11 +44,11 @@ for premenna in range(10):
 
 samohlasky = "aáeéiíoóuúyý"
 spoluhlasky = "dtnlchhgkďťňľcčžšdzdžjmbpvszsfr"
-cislo = "123456789"
+cislo = "0123456789"
 
 slovo = input("Zadaj slovo: ")
 
-pocitadlo = 0
+pocet_znakov = 0
 pocet_samohlasok = 0
 pocet_spol = 0
 pocet_cis = 0
@@ -57,17 +57,17 @@ for znak in slovo:
     if znak in samohlasky:
         pocet_samohlasok += 1
 
-    if znak in spoluhlasky:
+    elif znak in spoluhlasky:
         pocet_spol += 1
 
-    if znak in cislo:
+    elif znak in cislo:
         pocet_cis += 1
 
-else:
-    pocitadlo += 1
+    else:
+        pocet_znakov += 1
 
 print("slovo obsahuje samohlasky", pocet_samohlasok)
 print("slovo obsahuje spoluhlasky", pocet_spol)
 print("slovo obsahuje cislo", pocet_cis)
-print("slovo obsahuje ine znaky", pocitadlo)
+print("slovo obsahuje ine znaky", pocet_znakov)
 
