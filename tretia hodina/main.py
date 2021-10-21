@@ -41,6 +41,7 @@ for premenna in range(10):
     print(premenna)
 """
 
+
 samohlasky = "aáeéiíoóuúyý"
 spoluhlasky = "dtnlchhgkďťňľcčžšdzdžjmbpvszsfr"
 cislo = "123456789"
@@ -69,3 +70,4 @@ print("slovo obsahuje samohlasky", pocet_samohlasok)
 print("slovo obsahuje spoluhlasky", pocet_spol)
 print("slovo obsahuje cislo", pocet_cis)
 print("slovo obsahuje ine znaky", pocitadlo)
+
