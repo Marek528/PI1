@@ -70,4 +70,3 @@ print("slovo obsahuje samohlasky", pocet_samohlasok)
 print("slovo obsahuje spoluhlasky", pocet_spol)
 print("slovo obsahuje cislo", pocet_cis)
 print("slovo obsahuje ine znaky", pocet_znakov)
-
