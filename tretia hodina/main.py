@@ -62,7 +62,7 @@ for znak in slovo:
     if znak in cislo:
         pocet_cis += 1
 
-if pocitadlo != samohlasky and spoluhlasky and cislo:
+else:
     pocitadlo += 1
 
 print("slovo obsahuje samohlasky", pocet_samohlasok)
