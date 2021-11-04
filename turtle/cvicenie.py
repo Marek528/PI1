@@ -20,7 +20,7 @@ def stvorec():
         t.forward(50)
         t.left(90)
 
-number_of_stvorec =  
+number_of_stvorec =
 
 stvorec()
 
