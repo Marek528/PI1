@@ -1,8 +1,6 @@
-"""
-zoznam = [10,0,-1]
+zoznam = [10,9,8,7,6,5,4,3,2,1,0]
 for prvok in zoznam:
     print(prvok)
-"""
 
 zelenina = ["mrkva", "brokolica","melon", "kapusta"]
 ovocie = ["jablko", "malina", "hruska", "banan"]
