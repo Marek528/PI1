@@ -34,5 +34,42 @@ x = [5,8,1,3,"slovo"]
 print(len(x))
 
 #prechadzanie zoznamu
+zoznam_prvkov = ["jablko", "hruska", "banan"]
+#1.
+for prvok in zoznam_prvkov:
+    print(prvok)
+
+#2.
+for index in range(len(zoznam_prvkov)):
+    print(zoznam_prvkov[index])
 
 
+#metody zoznam
+mylist = [1,5,8,55,500]
+
+#append/ prida na koniec listu novy prvok
+mylist.append(99)
+mylist.append(1)
+mylist.append(0)
+print(mylist)
+
+#pop
+hodnota = mylist.pop()
+print(mylist)
+print(hodnota)
+
+
+
+
+#funkcie
+#len
+#min/max
+mylist2 = [1,54,7,2,74,-10]
+print("minimum", min(mylist2))
+print("maximum", max(mylist2))
+#suma / spocita prvky zoznamu
+print("suma", sum(mylist2))
+
+print(mylist2)
+#otoci list naopak
+print(sorted(mylist2))
