@@ -1,8 +1,14 @@
 while(True):
-    x = int(input("zadaj cislo: "))
-    if x == (1,2,3,4,5,6,7,8,9):
-        continue
+    premenna = input("zadaj cislo: ")
+    if premenna != "":
+        premenna = int(premenna)
     else:
         break
 
-print(x)
+def median(premenna):
+    dlzka = len(premenna)
+    if dlzka / 2 == 0:
+
+
+
+median(premenna)
