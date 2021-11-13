@@ -1,5 +1,6 @@
 import turtle
 from random import randrange, uniform
+
 turtle.delay(0)
 
 t = turtle.Turtle()
