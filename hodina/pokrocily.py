@@ -4,3 +4,4 @@ while(True):
         premenna = int(premenna)
     else:
         break
+
