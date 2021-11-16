@@ -9,3 +9,11 @@ while(True):
         break
 
 print(cisla)
+velkost = len(cisla)
+median = (velkost + 1) / 2
+
+
+
+print(int(median))
+
+
