@@ -8,6 +8,8 @@ while(True):
     else:
         break
 
+zoradene_cisla = sorted(cisla)
+print(zoradene_cisla)
 
 
 
