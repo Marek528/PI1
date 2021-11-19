@@ -9,7 +9,11 @@ while(True):
         break
 
 zoradene_cisla = sorted(cisla)
-print(zoradene_cisla)
+dlzka_cisel = len(zoradene_cisla)
+vypocet_medianu = int(dlzka_cisel / 2)
+
+for i in range(dlzka_cisel):
+    
 
 
 
