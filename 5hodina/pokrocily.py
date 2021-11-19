@@ -17,7 +17,7 @@ median = zoradene_cisla[vypocet_medianu]
 for i in range(dlzka_cisel):
     x = cisla[i]
     rozdiel_od_medianu = x - median
-    print(x, 'sa od medianu odlisuje o ',rozdiel_od_medianu)
-    
+    print(x, 'sa od medianu odlisuje o', rozdiel_od_medianu)
+
 
 
