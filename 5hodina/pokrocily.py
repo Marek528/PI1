@@ -9,6 +9,6 @@ while(True):
         break
 
 
-print(int(median))
+
 
 
