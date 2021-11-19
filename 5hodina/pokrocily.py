@@ -13,7 +13,6 @@ dlzka_cisel = len(zoradene_cisla)
 vypocet_medianu = int(dlzka_cisel / 2)
 median = zoradene_cisla[vypocet_medianu]
 
-
 for i in range(dlzka_cisel):
     x = cisla[i]
     rozdiel_od_medianu = x - median
