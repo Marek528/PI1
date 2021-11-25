@@ -1,4 +1,4 @@
 list1 = ['a', 'b', 'c']
 
-for i in range(len(list1)):
-    open('file%s.txt' % i, 'w').write(list1[i])
+for i in range(pocet_suborov):
+    open('%s.txt' % i, 'w', encoding='UTF-8').write(list[i])
