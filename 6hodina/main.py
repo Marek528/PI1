@@ -10,7 +10,6 @@ print('maximalny pocet obyvatelov v dome je', max(domy))
 print('pocet maximalnych domov je', max_pocet)
 """
 
-
 domy = [1,5,0,8,9,2,4,5,3,7,9,1,9,5,0]
 
 print('pocet obyvatelov je', sum(domy))
