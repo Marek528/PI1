@@ -45,4 +45,4 @@ elif vyber == 6:
     vysledok = a ** 1/b
     print('vysledok umocnovania je:', vysledok)
 else:
-    print('prosim vyber cislo medzi 1 - 5')
+    print('prosim vyber si z moznosti od 1 - 5')
