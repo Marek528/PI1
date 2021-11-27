@@ -1,7 +1,7 @@
 pocet_suborov = int(input('zadaj pocet suborov: '))
 list = []
 
-with open ('./7hodina/basnicka.txt', encoding='UTF-8') as subor:
+with open ('./basnicka.txt', encoding='UTF-8') as subor:
     for riadok in subor:
         list += riadok.split()
 
