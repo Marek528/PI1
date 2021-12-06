@@ -20,14 +20,21 @@ for riadok in range(1,5):
 3
 """
 
+"""
 if __name__ == '__main__':
     n = int(input())
     arr = map(int, input().split())
     
 zoradene = sorted(arr)
 premenna = max(zoradene)
-for i in zoradene:
+
+for i in zoradene[::-1]:
     if i == premenna:
         continue
     print(i)
     break
+"""
+
+
+
+
