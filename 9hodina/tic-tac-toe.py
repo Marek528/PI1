@@ -5,9 +5,6 @@ hracie_pole = [
     [3, " ", " ", " "],
 ]
 
-krizik = "X"
-kruzok = "O"
-
 def usporiadanie(hracie_pole):
     for riadok in hracie_pole:
         for policko in riadok:
@@ -26,7 +23,7 @@ while True:
     poloha2 = int(input('zadaj poziciu 2: '))
     if poloha2 > 3 or poloha2 == 0:
         print('zadaj cislo od 1 - 3')
-    
+        
     vkladanie = hracie_pole[poloha1][poloha2] = 'X'
     usporiadanie(hracie_pole)
     
