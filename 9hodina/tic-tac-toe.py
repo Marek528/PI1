@@ -18,39 +18,25 @@ def usporiadanie(hracie_pole):
 while True:
     usporiadanie(hracie_pole)
     print('Na rade je hrac s krizikmi')
+
     poloha1 = int(input('zadaj poziciu 1: '))
-    if poloha1 > 3:
-        print('zadaj mensie cislo!')
-    elif poloha1 == 0:
-        print('zadaj väčšie cislo!')
-    else:
-        continue
+    if poloha1 > 3 or poloha1 == 0:
+        print('zadaj cislo od 1 - 3')
 
     poloha2 = int(input('zadaj poziciu 2: '))
-    if poloha2 > 3:
-        print('zadaj mensie cislo!')
-    elif poloha2 == 0:
-        print('zadaj väčšie cislo!')
-    else:
-        continue
-    vkladanie = hracie_pole[poloha1][poloha2] = 'X'
+    if poloha2 > 3 or poloha2 == 0:
+        print('zadaj cislo od 1 - 3')
     
-
+    vkladanie = hracie_pole[poloha1][poloha2] = 'X'
     usporiadanie(hracie_pole)
+    
     print('Na rade je hrac s kruzkami')
     poloha1 = int(input('zadaj poziciu 1: '))
-    if poloha1 > 3:
-        print('zadaj mensie cislo!')
-    elif poloha1 == 0:
-        print('zadaj väčšie cislo!')
-    else:
-        continue
+    if poloha1 > 3 or poloha1 == 0:
+        print('zadaj cislo od 1 - 3')
 
     poloha2 = int(input('zadaj poziciu 2: '))
-    if poloha2 > 3:
-        print('zadaj mensie cislo!')
-    elif poloha2 == 0:
-        print('zadaj väčšie cislo!')
-    else:
-        continue
+    if poloha2 > 3 or poloha2 == 0:
+        print('zadaj cislo od 1 - 3')
+
     vkladanie = hracie_pole[poloha1][poloha2] = 'O'
