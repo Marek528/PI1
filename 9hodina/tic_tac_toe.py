@@ -4,7 +4,7 @@ hracie_pole = [
     ["-", "-", "-"]
 ]
 
-hrac = True #ked je "True" znamena X, inak O
+hrac = True #ked je "True" znamena X, ked je "False" znamena O
 pocet = 0
 
 def vypisHraciehoPola(hracie_pole):
