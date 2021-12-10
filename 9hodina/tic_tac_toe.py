@@ -123,7 +123,7 @@ while pocet < 9:
         continue
     pridajDoPola(poloha, hracie_pole, aktivny_hrac)
     if kontrolaVyhry(aktivny_hrac, hracie_pole):
-        print(f"{aktivny_hrac.upper()} won!")
+        print(f"{aktivny_hrac.upper()} vyhral!")
         vypisHraciehoPola(hracie_pole)
         break
 
