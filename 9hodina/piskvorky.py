@@ -19,10 +19,12 @@ while True:
     poloha1 = int(input('zadaj poziciu 1: '))
     if poloha1 > 3 or poloha1 == 0:
         print('zadaj cislo od 1 - 3')
+        continue
 
     poloha2 = int(input('zadaj poziciu 2: '))
     if poloha2 > 3 or poloha2 == 0:
         print('zadaj cislo od 1 - 3')
+        continue
         
     vkladanie = hracie_pole[poloha1][poloha2] = 'X'
     usporiadanie(hracie_pole)
@@ -31,9 +33,11 @@ while True:
     poloha1 = int(input('zadaj poziciu 1: '))
     if poloha1 > 3 or poloha1 == 0:
         print('zadaj cislo od 1 - 3')
+        continue
 
     poloha2 = int(input('zadaj poziciu 2: '))
     if poloha2 > 3 or poloha2 == 0:
         print('zadaj cislo od 1 - 3')
-
+        continue
     vkladanie = hracie_pole[poloha1][poloha2] = 'O'
+    
