@@ -76,9 +76,10 @@ def vykresli():
         )
 
     #vykreslit skore
+    """
     nakresli_text(str(skore[0]), x=ODSADENIE_TEXTU, y=vyska - ODSADENIE_TEXTU - VELKOST_FONTU, pozice_x="left")
     nakresli_text(str(skore[1]), x=sirka - ODSADENIE_TEXTU, y=vyska - ODSADENIE_TEXTU - VELKOST_FONTU, pozice_x="right")
-
+    """
 
 
 
