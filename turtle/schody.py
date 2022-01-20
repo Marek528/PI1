@@ -2,7 +2,7 @@ import turtle
 t = turtle.Turtle()
 
 def schody():
-    for i in range(7):
+    for i in range(5):
         t.forward(50)
         t.left(90)
         t.forward(50)

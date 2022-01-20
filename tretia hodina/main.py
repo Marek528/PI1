@@ -27,10 +27,10 @@ while (start >= koniec):
     start = start - 1
 
 print("-----------------")
-
+"""
 start = int(input("zadaj odkial bude pocitat: "))
 koncove = int(input("zadaj pokial bude pocitat: "))
-while(start < koniec):
+while(start < koncove):
     if(start % 3 == 0):
         print(start, "je nasobok 3ky")
     start += 1
@@ -39,9 +39,9 @@ print("-----------------")
 
 for premenna in range(10):
     print(premenna)
+
+
 """
-
-
 samohlasky = "aáeéiíoóuúyý"
 spoluhlasky = "dtnlchhgkďťňľcčžšdzdžjmbpvszsfr"
 cislo = "0123456789"
@@ -70,3 +70,4 @@ print("slovo obsahuje samohlasky", pocet_samohlasok)
 print("slovo obsahuje spoluhlasky", pocet_spol)
 print("slovo obsahuje cislo", pocet_cis)
 print("slovo obsahuje ine znaky", pocet_znakov)
+"""
