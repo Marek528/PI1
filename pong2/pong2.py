@@ -174,9 +174,6 @@ def obnov_stav(dt):
             skore[0] += 1
             reset()
 
-
-
-
 reset()
 window = pyglet.window.Window(width=SIRKA,height=VYSKA)
 window.push_handlers(
