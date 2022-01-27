@@ -174,10 +174,10 @@ def obnov_stav(dt):
             skore[0] += 1
             reset()
 
-if skore[0] == 10 or skore[1] == 10:
+if skore[0] == 10:
     nakresli_text("Vyhral hrac 1", x=ODSADENIE_TEXTU, y=VYSKA - ODSADENIE_TEXTU - VELKOST_FONTU, pozice_x='left')
-
-
+if skore[1] == 10:
+    nakresli_text("Vyhral hrac 2", x=ODSADENIE_TEXTU, y=VYSKA - ODSADENIE_TEXTU - VELKOST_FONTU, pozice_x='left')
 
 
 
