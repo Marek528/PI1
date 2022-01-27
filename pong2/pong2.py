@@ -118,7 +118,9 @@ def obnov_stav(dt):
 
         if pozicia_palok[cislo_palky] < VYSKA_PALKY /2:
             pozicia_palok[cislo_palky] = VYSKA_PALKY /2
-        
+
+        if pozicia_palok[cislo_palky] > VYSKA - VYSKA_PALKY /2:
+            pozicia_palok[cislo_palky] = VYSKA - VYSKA_PALKY /2
 
 window = pyglet.window.Window(width=SIRKA,height=VYSKA)
 window.push_handlers(
