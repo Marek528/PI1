@@ -1,4 +1,5 @@
 import pyglet
+import random
 
 #KONSTANTY OKNA
 from pyglet import gl
@@ -30,6 +31,19 @@ pozicia_lopty = [SIRKA//2,VYSKA//2]
 rychlost_lopty =[0,0]
 stisknute_klavesy = set()
 skore = [0,0]
+
+def reset():
+    pozicia_lopty[0] = SIRKA//2
+    pozicia_lopty[1] = SIRKA // 2
+
+    # x-ova rychlost - vpravo/vlavo
+    if random.randint(0,1):
+        rychlost_lopty[0] = RYCHLOST
+    else:
+        rychlost_lopty[0] = -RYCHLOST
+
+    #y-ova rychlost - vpravo/vlavo
+    rychlost_lopty[1] = random.uniform(-1,1) * RYCHLOST
 
 
 def vykresli_obdlznik(x1,y1, x2,y2):
@@ -116,18 +130,29 @@ def obnov_stav(dt):
         if ('dole', cislo_palky) in stisknute_klavesy:
             pozicia_palok[cislo_palky] -= RYCHLOST_PALKY * dt
 
+        #dolna zarazka
         if pozicia_palok[cislo_palky] < VYSKA_PALKY /2:
             pozicia_palok[cislo_palky] = VYSKA_PALKY /2
 
+        #horna zarazka
         if pozicia_palok[cislo_palky] > VYSKA - VYSKA_PALKY /2:
             pozicia_palok[cislo_palky] = VYSKA - VYSKA_PALKY /2
 
+        #pohyb lopty
+        pozicia_lopty[0] += rychlost_lopty[0] * dt
+        pozicia_lopty[1] += rychlost_lopty[1] * dt
+
+        #odrazanie lopty
+        
+
+reset()
 window = pyglet.window.Window(width=SIRKA,height=VYSKA)
 window.push_handlers(
     on_draw=vykresli,
     on_key_press=stisk_klavesnice,
     on_key_release=pusti_klavesnice,
 )
+
 pyglet.clock.schedule(obnov_stav)
 
 pyglet.app.run()
