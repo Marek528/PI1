@@ -18,7 +18,7 @@ def zpracuj_text(text):
     had.x = 150
 
 
-obrazok = pyglet.image.load('C:/Users/Marek/Documents/code/PI1/pong/sprites/snake.jpg')
+obrazok = pyglet.image.load('sprites/snake.jpg')
 had = pyglet.sprite.Sprite(obrazok)
 
 
@@ -27,7 +27,7 @@ def vykreslit():
     had.draw()
 
 
-obrazok2 = pyglet.image.load('C:/Users/Marek/Documents/code/PI1/pong/sprites/had.png')
+obrazok2 = pyglet.image.load('sprites/had.png')
 
 
 def zmen(t):
