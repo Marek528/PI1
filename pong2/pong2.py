@@ -138,12 +138,44 @@ def obnov_stav(dt):
         if pozicia_palok[cislo_palky] > VYSKA - VYSKA_PALKY /2:
             pozicia_palok[cislo_palky] = VYSKA - VYSKA_PALKY /2
 
-        #pohyb lopty
-        pozicia_lopty[0] += rychlost_lopty[0] * dt
-        pozicia_lopty[1] += rychlost_lopty[1] * dt
+    #pohyb lopty
+    pozicia_lopty[0] += rychlost_lopty[0] * dt
+    pozicia_lopty[1] += rychlost_lopty[1] * dt
 
-        #odrazanie lopty
-        
+    #odrazanie lopty
+    if pozicia_lopty[1] < VELKOST_LOPTY //2:
+        rychlost_lopty[1] = abs(rychlost_lopty[1])
+
+    if pozicia_lopty[1] > VYSKA - VELKOST_LOPTY //2:
+        rychlost_lopty[1] = -abs(rychlost_lopty[1])
+
+    #palka borderov palky
+    palka_min = pozicia_lopty[1] - VELKOST_LOPTY / 2 - VYSKA_PALKY / 2
+    palka_max = pozicia_lopty[1] + VELKOST_LOPTY / 2 + VYSKA_PALKY / 2
+
+    #odraz z lava
+    if pozicia_lopty[0] < TLSTKA_PALKY + VELKOST_LOPTY//2:
+        if palka_min < pozicia_palok[0] < palka_max:
+            #odrazime loptu
+            rychlost_lopty[0] = abs(rychlost_lopty[0])
+        else:
+            #palka je inde ako lopta a hrac prehral
+            skore[1] += 1
+            reset()
+
+
+    #odraz zprava
+    if pozicia_lopty[0] > SIRKA - (TLSTKA_PALKY + VELKOST_LOPTY / 2):
+        if palka_min < pozicia_palok[1] < palka_max:
+            #odrazime loptu
+            rychlost_lopty[0] = -abs(rychlost_lopty[0])
+        else:
+            #palka je inde ako lopta a hrac prehral
+            skore[0] += 1
+            reset()
+
+
+
 
 reset()
 window = pyglet.window.Window(width=SIRKA,height=VYSKA)
