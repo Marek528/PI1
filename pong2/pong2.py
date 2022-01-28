@@ -9,12 +9,12 @@ VYSKA = 700
 
 #LOPTA
 VELKOST_LOPTY= 20
-RYCHLOST = 200 #pixely za sekundu
+RYCHLOST = 250 #pixely za sekundu
 
 #PALKY
 TLSTKA_PALKY = 10
 VYSKA_PALKY = 100
-RYCHLOST_PALKY =  RYCHLOST * 1.5
+RYCHLOST_PALKY =  RYCHLOST * 1.25
 
 #PROSTREDNA CIARA
 CIARA_HRUBKA = 20
@@ -34,7 +34,7 @@ window = pyglet.window.Window(width=SIRKA,height=VYSKA)
 
 def reset():
     pozicia_lopty[0] = SIRKA//2
-    pozicia_lopty[1] = SIRKA // 2
+    pozicia_lopty[1] = VYSKA//2
 
     # x-ova rychlost - vpravo/vlavo
     if random.randint(0,1):
@@ -73,6 +73,8 @@ def stisk_klavesnice(symbol, modifikatory):
         stisknute_klavesy.add( ('hore', 1 ) )
     if symbol == key.DOWN:
         stisknute_klavesy.add( ('dole', 1 ) )
+    if symbol == key.R:
+        stisknute_klavesy.add( ('reset', 1 ) )
 
 def pusti_klavesnice(symbol, modifikatory):
     if symbol == key.W:
@@ -83,6 +85,8 @@ def pusti_klavesnice(symbol, modifikatory):
         stisknute_klavesy.discard( ('hore', 1 ) )
     if symbol == key.DOWN:
         stisknute_klavesy.discard( ('dole', 1 ) )
+    if symbol == key.R:
+        stisknute_klavesy.discard( ('reset', 1 ) )
 
 def vykresli():
     """Vykresli stav hry"""
@@ -121,6 +125,24 @@ def vykresli():
     #vykreslit score
     nakresli_text(str(skore[0]),x=ODSADENIE_TEXTU,y = VYSKA- ODSADENIE_TEXTU - VELKOST_FONTU,pozice_x='left')
     nakresli_text(str(skore[1]),x=SIRKA-ODSADENIE_TEXTU,y = VYSKA- ODSADENIE_TEXTU - VELKOST_FONTU,pozice_x='right')
+
+    if skore[0] == 10:
+        nakresli_text("Vyhral hrac 1", SIRKA//2, VYSKA//2, pozice_x="center")
+        reset() == False
+        nakresli_text("Stlac R pre reset hry", SIRKA//2, VYSKA//2 - 100, pozice_x="center")
+        
+        if ('reset') in stisknute_klavesy:
+            window.clear()
+            reset() == True
+
+    if skore[1] == 10:
+        nakresli_text("Vyhral hrac 2", SIRKA//2, VYSKA//2, pozice_x="center")
+        reset() == False
+        nakresli_text("Stlac R pre reset hry", SIRKA//2, VYSKA//2 - 100, pozice_x="center")
+
+        if ('reset') in stisknute_klavesy:
+            window.clear()
+            reset() == True
 
 def obnov_stav(dt):
     for cislo_palky in (0,1):
@@ -173,18 +195,10 @@ def obnov_stav(dt):
             skore[0] += 1
             reset()
 
-def vykreslenie_vyhry():
-    vyhra_pre_prveho_hraca = pyglet.text.Label(text="Vyhral hrac 1", x=VYSKA // 2, y=SIRKA // 2)
-    vyhra_pre_druheho_hraca = pyglet.text.Label(text="Vyhral hrac 2", x=VYSKA // 2, y=SIRKA // 2)
-
-    window.clear()
-    if skore[0] == 2:
-        vyhra_pre_prveho_hraca.draw()
-    if skore[1] == 2:
-        vyhra_pre_druheho_hraca.draw()
-
-reset()
-vykreslenie_vyhry()
+while skore < 10:
+    reset() == True
+    if skore[0,1] ==10:
+        break
 
 window.push_handlers(
     on_draw=vykresli,
