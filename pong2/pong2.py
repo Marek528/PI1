@@ -1,10 +1,9 @@
 import pyglet
 import random
-
-#KONSTANTY OKNA
 from pyglet import gl
 from pyglet.window import key
 
+#KONSTANTY OKNA
 SIRKA = 1000
 VYSKA = 700
 
@@ -16,7 +15,6 @@ RYCHLOST = 200 #pixely za sekundu
 TLSTKA_PALKY = 10
 VYSKA_PALKY = 100
 RYCHLOST_PALKY =  RYCHLOST * 1.5
-
 
 #PROSTREDNA CIARA
 CIARA_HRUBKA = 20
@@ -32,6 +30,8 @@ rychlost_lopty =[0,0]
 stisknute_klavesy = set()
 skore = [0,0]
 
+window = pyglet.window.Window(width=SIRKA,height=VYSKA)
+
 def reset():
     pozicia_lopty[0] = SIRKA//2
     pozicia_lopty[1] = SIRKA // 2
@@ -44,7 +44,6 @@ def reset():
 
     #y-ova rychlost - vpravo/vlavo
     rychlost_lopty[1] = random.uniform(-1,1) * RYCHLOST
-
 
 def vykresli_obdlznik(x1,y1, x2,y2):
     # Tady pouzijeme volani OpenGL, ktere je pro nas zatim asi nejjednodussi
@@ -174,15 +173,19 @@ def obnov_stav(dt):
             skore[0] += 1
             reset()
 
-if skore[0] == 10:
-    nakresli_text(str("Vyhral hrac 1"),x=ODSADENIE_TEXTU,y = VYSKA- ODSADENIE_TEXTU - VELKOST_FONTU,pozice_x='left')
-if skore[1] == 10:
-    nakresli_text(str("Vyhral hrac 2"),x=SIRKA-ODSADENIE_TEXTU,y = VYSKA- ODSADENIE_TEXTU - VELKOST_FONTU,pozice_x='right')
+def vykreslenie_vyhry():
+    vyhra_pre_prveho_hraca = pyglet.text.Label(text="Vyhral hrac 1", x=VYSKA // 2, y=SIRKA // 2)
+    vyhra_pre_druheho_hraca = pyglet.text.Label(text="Vyhral hrac 2", x=VYSKA // 2, y=SIRKA // 2)
 
-
+    window.clear()
+    if skore[0] == 2:
+        vyhra_pre_prveho_hraca.draw()
+    if skore[1] == 2:
+        vyhra_pre_druheho_hraca.draw()
 
 reset()
-window = pyglet.window.Window(width=SIRKA,height=VYSKA)
+vykreslenie_vyhry()
+
 window.push_handlers(
     on_draw=vykresli,
     on_key_press=stisk_klavesnice,
