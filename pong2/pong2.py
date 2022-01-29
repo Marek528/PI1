@@ -73,8 +73,9 @@ def stisk_klavesnice(symbol, modifikatory):
         stisknute_klavesy.add( ('hore', 1 ) )
     if symbol == key.DOWN:
         stisknute_klavesy.add( ('dole', 1 ) )
-    if symbol == key.R:
-        stisknute_klavesy.add( ('reset', 1 ) )
+    if symbol == key.ENTER:
+        stisknute_klavesy.add( ('enter') )
+        print(stisknute_klavesy)
 
 def pusti_klavesnice(symbol, modifikatory):
     if symbol == key.W:
@@ -85,8 +86,9 @@ def pusti_klavesnice(symbol, modifikatory):
         stisknute_klavesy.discard( ('hore', 1 ) )
     if symbol == key.DOWN:
         stisknute_klavesy.discard( ('dole', 1 ) )
-    if symbol == key.R:
-        stisknute_klavesy.discard( ('reset', 1 ) )
+#    if symbol == key.ENTER:
+#        stisknute_klavesy.discard( ('enter') )
+#        print(stisknute_klavesy)
 
 def vykresli():
     """Vykresli stav hry"""
@@ -129,20 +131,20 @@ def vykresli():
     if skore[0] == 10:
         nakresli_text("Vyhral hrac 1", SIRKA//2, VYSKA//2, pozice_x="center")
         reset() == False
-        nakresli_text("Stlac R pre reset hry", SIRKA//2, VYSKA//2 - 100, pozice_x="center")
+        nakresli_text("Stlac ENTER pre reset hry", SIRKA//2, VYSKA//2 - 100, pozice_x="center")
         
-        if ('reset') in stisknute_klavesy:
+        if ('enter') in stisknute_klavesy:
             window.clear()
-            reset() == True
+            obnov_stav()
 
     if skore[1] == 10:
         nakresli_text("Vyhral hrac 2", SIRKA//2, VYSKA//2, pozice_x="center")
         reset() == False
-        nakresli_text("Stlac R pre reset hry", SIRKA//2, VYSKA//2 - 100, pozice_x="center")
+        nakresli_text("Stlac ENTER pre reset hry", SIRKA//2, VYSKA//2 - 100, pozice_x="center")
 
-        if ('reset') in stisknute_klavesy:
+        if ('enter') in stisknute_klavesy:
             window.clear()
-            reset() == True
+            obnov_stav(dt)
 
 def obnov_stav(dt):
     for cislo_palky in (0,1):
@@ -195,10 +197,10 @@ def obnov_stav(dt):
             skore[0] += 1
             reset()
 
-while skore < 10:
+if skore[0] or skore[1] == 10:
+    reset() == False
+else:
     reset() == True
-    if skore[0,1] ==10:
-        break
 
 window.push_handlers(
     on_draw=vykresli,
