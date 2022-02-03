@@ -75,7 +75,6 @@ def stisk_klavesnice(symbol, modifikatory):
         stisknute_klavesy.add( ('dole', 1 ) )
     if symbol == key.ENTER:
         stisknute_klavesy.add( ('enter') )
-        print(stisknute_klavesy)
 
 def pusti_klavesnice(symbol, modifikatory):
     if symbol == key.W:
