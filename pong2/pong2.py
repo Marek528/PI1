@@ -135,7 +135,9 @@ def vykresli():
         
         if ('enter') in stisknute_klavesy:
             window.clear()
-            obnov_stav()
+            obnov_stav(5)
+            skore[0] = 0
+            skore[1] = 0
 
     if skore[1] == 10:
         nakresli_text("Vyhral hrac 2", SIRKA//2, VYSKA//2, pozice_x="center")
@@ -144,7 +146,9 @@ def vykresli():
 
         if ('enter') in stisknute_klavesy:
             window.clear()
-            obnov_stav(dt)
+            obnov_stav(5)
+            skore[0] = 0
+            skore[1] = 0
 
 def obnov_stav(dt):
     for cislo_palky in (0,1):
