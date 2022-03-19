@@ -1,21 +1,25 @@
 import turtle
 t = turtle.Turtle()
 
+velkost_mnohouholnika = 60
+
+def cast_mnohouholnika():        
+    t.right(velkost_mnohouholnika)
+    t.forward(velkost_mnohouholnika)
+    t.left(velkost_mnohouholnika)
+    t.forward(velkost_mnohouholnika)
+    t.left(velkost_mnohouholnika)
+    t.forward(velkost_mnohouholnika)
+
 def mnohouholnik():
-    for i in range(1):
-        t.right(45)
-        t.forward(50)
-    for i in range(1):
-        t.left(45)
-        t.forward(50)
-        t.left(45)
-        t.forward(50)
+    cast_mnohouholnika()
+    t.left(120)
+    cast_mnohouholnika()
+
+
+
 
 mnohouholnik()
-t.left(100)
-
-mnohouholnik()
-
 
 
 turtle.exitonclick()
