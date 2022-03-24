@@ -1,15 +1,15 @@
 class Calc:
     def sucet(self):
-        return a + b
+        return print("Sucet:", a + b)
 
     def rozdiel(self):
-        return a - b
+        return print("Rozdiel:", a - b)
     
     def sucin(self):
-        return a * b
+        return print("Sucin:", a * b)
     
     def podiel(self):
-        return a / b
+        return print("Podiel:", a / b)
 
 
 kalkulacka = Calc()
