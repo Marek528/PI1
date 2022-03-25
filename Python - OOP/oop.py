@@ -42,10 +42,11 @@ class Auto:
         self.jeNastartovane = False
 
     def __str__(self):
-        print("Znacka auta je: ",self.znacka)
-        print("Rok vyroby je: ",self.rok)
-        print("Farba auta je: ",self.farba)
-        print("Pocet miest v aute je:", self.pocet_miest)
+        print("Znacka auta je:",self.znacka)
+        print("Rok vyroby je:",self.rok)
+        print("Farba auta je:",self.farba)
+        print("Pocet miest v aute je:",self.pocet_miest)
+        print("Auto je nastartovane:",self.jeNastartovane)
         return " "
 
     def zapniMotor(self, state):
