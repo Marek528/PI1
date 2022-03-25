@@ -46,7 +46,6 @@ class Auto:
         print("Rok vyroby je: ",self.rok)
         print("Farba auta je: ",self.farba)
         print("Pocet miest v aute je:", self.pocet_miest)
-        print("Auto je: ", str(self.jeNastartovane))
         return " "
 
     def zapniMotor(self, state):

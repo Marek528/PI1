@@ -12,4 +12,4 @@ class Cube:
 print("Kocka s", hrany, "hranami")
 kocka = Cube(hrany)
 for i in range(10):
-    print(kocka.hodKockou(), end= ' ')
+    print(kocka.hodKockou(), end=' ')
