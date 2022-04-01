@@ -1,14 +1,3 @@
-class Car:
-    def __init__(self, SPZ, color):
-        self.SPZ = SPZ
-        self.color = color
-    
-    def zaparkuj(self, garage):
-        garage.cars_in_garage.append("{0} {1}".format(self.SPZ, self.color))
-
-    def vyparkuj(self, garage):
-        pass
-
 class Garage:
 
     cars_in_garage = []
@@ -19,10 +8,22 @@ class Garage:
         else:
             print("V garazi su auta: {}".format(', '.join(self.cars_in_garage)))
 
-garaz = Garage()
+class Car:
+    def __init__(self, SPZ, color):
+        self.SPZ = SPZ
+        self.color = color
+    
+    def zaparkuj(self, garage):
+        garage.cars_in_garage.append("{0} {1}".format(self.SPZ, self.color))
+
+garage = Garage()
+garage.vypis_aut()
 bmw = Car("123ABC", "modre")
 bmw.zaparkuj(garage)
-audi = Car("987DPI", color)
+garage.vypis_aut()
+audi = Car("987DPI", "cervena")
 audi.zaparkuj(garage)
+garage.vypis_aut()
 renault = Car("456LAM", "zlta")
 renault.zaparkuj(garage)
+garage.vypis_aut()
